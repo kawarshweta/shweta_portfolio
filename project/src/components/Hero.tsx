@@ -15,6 +15,7 @@ interface Box {
 
 const Hero = () => {
   const [boxes, setBoxes] = useState<Box[]>([]);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   // Memoize the generateBoxes function to prevent unnecessary recalculations
   const generateBoxes = useMemo(() => () => {
@@ -79,10 +80,18 @@ const Hero = () => {
     { top: 'top-1/3', left: 'right-1/3', size: 'w-18 h-18', border: 'border-cyan-400/30', bg: 'bg-cyan-400/10', delay: '10s', hideMobile: true },
   ], []);
 
+  const handleOpenResume = () => {
+    setIsResumeOpen(true);
+  };
+
+  const handleCloseResume = () => {
+    setIsResumeOpen(false);
+  };
+
   return (
     <section
       id="home"
-      className="relative pt-16 pb-16 md:pt-20 md:pb-6 bg-black text-white overflow-hidden min-h-screen"
+      className="relative pt-16 md:pt-20 bg-black text-white overflow-hidden min-h-screen"
     >
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="sparkle-bg">
@@ -137,14 +146,17 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-6 mb-12 animate-fade-in-delay-2">
-            <button className="bg-white text-black px-8 py-4 rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 font-semibold flex items-center gap-2">
+            <button
+              onClick={handleOpenResume}
+              className="bg-white text-black px-8 py-4 rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 font-semibold flex items-center gap-2"
+            >
               <FileText size={20} />
               View Resume
             </button>
           </div>
 
           <div className="flex space-x-6 animate-fade-in-delay-2">
-             {[
+            {[
               { Icon: Github, label: 'GitHub Profile', href: 'https://github.com/kawarshweta' },
               { Icon: Linkedin, label: 'LinkedIn Profile', href: 'https://www.linkedin.com/in/shweta-kawar-188416203/' },
               { Icon: Mail, label: 'Email', href: 'mailto:shwetakawar5@gmail.com' },
@@ -163,6 +175,27 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {isResumeOpen && (
+        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
+          <div className="relative bg-white w-full max-w-4xl h-[80vh] rounded-lg overflow-hidden">
+            <button
+              onClick={handleCloseResume}
+              className="absolute top-4 right-4 bg-gray-200 text-black p-2 rounded-full hover:bg-gray-300 transition-all duration-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <embed
+              src="/pdf/Frontend_Developer_Shwetakawar_Resume.pdf"
+              className="w-full h-full"
+              type="application/pdf"
+              title="Shweta's Resume"
+            />
+          </div>
+        </div>
+      )}
 
       <style>
         {`
