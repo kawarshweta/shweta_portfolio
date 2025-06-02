@@ -19,7 +19,7 @@ const projectsData: Project[] = [
     title: "Swiggy Clone",
     description:
       "A Swiggy clone built for smooth food delivery, featuring real-time updates via live Swiggy APIs. It offers a responsive UI, dynamic restaurant listings, item filtering, cart management, and real-time data sync — delivering a seamless user experience.",
-    image: "../src/images/swiggy_thumbnail.png",
+    image: "/images/swiggy_thumbnail.png",
     number: "01",
     category: "Professional",
     skills: [

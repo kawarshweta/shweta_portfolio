@@ -163,7 +163,7 @@ const ExperienceCard = ({
       <div className="flex items-start gap-4 bg-white/5 border border-white/15 hover:border-indigo-500/50 p-4 sm:p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 backdrop-blur-sm animate-fade-in">
         <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 bg-gradient-to-br text-white rounded-full flex items-center justify-center shadow-md">
           <img
-            src={`../src/images/${experience.logo}`}
+            src={`/images/${experience.logo}`}
             alt={`${experience.company} Logo`}
             className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover"
           />
