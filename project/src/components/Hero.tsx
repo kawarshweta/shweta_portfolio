@@ -135,7 +135,7 @@ const Hero = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight animate-slide-up">
               Hi, I'm Shweta <br />
               <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
-                Web Developer
+                Frontend Developer
               </span>
             </h1>
           </div>

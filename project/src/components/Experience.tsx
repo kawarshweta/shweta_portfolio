@@ -4,12 +4,12 @@ const experienceData = [
   {
     id: 1,
     role: "Frontend Engineer",
-    company: "TechuLabs",
+    company: "TechupLabs",
     period: "Aug 2023 - Present",
     location: "Remote",
     companyUrl: "https://www.techuplabs.com/",
     companyDescription:
-      "TechuLabs is a company focusing on innovative web applications.",
+      "TechupLabs is a company focusing on innovative web applications.",
     summary:
       "Led frontend development for the Feedspace app and contributed to projects like Feedapce, Flocksy, Kalaa, and LD Expert, focusing on responsive, mobile-first UI/UX with HTML, CSS, JavaScript, React, and TypeScript. Enhanced user engagement through A/B testing and optimized performance by improving LCP and SEO. Delivered intuitive features for user simplicity and ensured seamless cross-device functionality.",
     keyWork: [
@@ -113,7 +113,7 @@ const Modal = ({
             </svg>
           </button>
         </div>
-        <p className="text-xs sm:text-sm text-gray-300 mb-4 break-words">
+        <p className="text-sm sm:text-sm text-gray-300 mb-4 break-words">
           {experience.companyDescription}
         </p>
         {experience.companyUrl && (
@@ -177,11 +177,11 @@ const ExperienceCard = ({
               {experience.period}
             </span>
           </div>
-          <p className="text-xs sm:text-sm text-gray-300 mb-2 break-words">
+          <p className="text-sm sm:text-sm text-gray-300 mb-2 break-words">
             {experience.company} • {experience.location}
           </p>
           <p
-            className="text-xs sm:text-sm text-gray-300 mb-4 break-words"
+            className="text-sm sm:text-sm text-gray-300 mb-4 break-words"
             dangerouslySetInnerHTML={{ __html: experience.summary }}
           ></p>
           <button
