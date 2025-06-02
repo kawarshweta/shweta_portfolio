@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-24 bg-black text-white relative overflow-hidden"
+      className="py-10 bg-black text-white relative overflow-hidden"
       aria-labelledby="about-heading"
     >
       <div className="container mx-auto px-4 md:px-6">

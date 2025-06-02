@@ -1,4 +1,4 @@
-import {Mail, Phone } from 'lucide-react';
+import {Mail} from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -17,16 +17,16 @@ const Footer = () => {
                 shwetakawar5@gmail.com
               </a>
             </div>
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <Phone size={18} className="mr-2" />
               <a href="tel:+1234567890" className="hover:text-gray-300 transition-colors">
                 8652139346
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
         
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800">
+        <div className="flex justify-center flex-col md:flex-row pt-8 border-t border-gray-800">
           <p className="text-gray-400 mb-4 md:mb-0">
             © {new Date().getFullYear()} Shweta Kawar. All rights reserved.
           </p>

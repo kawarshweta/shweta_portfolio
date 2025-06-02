@@ -19,13 +19,14 @@ const Header = ({ scrolled }: HeaderProps) => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center py-5">
-        <a href="#" className="text-xl font-bold flex items-center text-white hover:text-blue-400 transition-all duration-300 transform hover:scale-105">
-         Portfolio
+        <a className="text-xl font-bold flex items-center text-white hover:text-blue-400 transition-all duration-300 transform hover:scale-105">
+         &lt;S /&gt;
+
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          {['Home', 'Skills', 'Experience', 'About', 'Projects', 'Contact'].map((item) => (
+          {['Home', 'Skills', 'Experience', 'About', 'Projects'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -56,7 +57,7 @@ const Header = ({ scrolled }: HeaderProps) => {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-black/90 backdrop-blur-sm shadow-md">
             <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-              {['Home', 'Skills', 'Experience', 'About', 'Projects', 'Contact'].map((item) => (
+              {['Home', 'Skills', 'Experience', 'About', 'Projects', ''].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}

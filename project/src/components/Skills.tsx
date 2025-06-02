@@ -8,10 +8,10 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { name: 'HTML', logo: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/html5/html5-original.svg' },
   { name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/javascript/javascript-original.svg' },
   { name: 'React', logo: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/react/react-original.svg' },
   { name: 'Redux Toolkit', logo: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/redux/redux-original.svg' },
+  { name: 'HTML', logo: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/html5/html5-original.svg' },
   { name: 'CSS', logo: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/css3/css3-original.svg' },
   { name: 'SCSS', logo: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/sass/sass-original.svg' },
   { name: 'Tailwind CSS', logo: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/tailwindcss/tailwindcss-original.svg' },
