@@ -29,9 +29,27 @@ const projectsData: Project[] = [
       "Tailwind CSS",
       "Shadcn/UI",
       "Zustand",
-
     ],
     website: "https://swiggy-clone-nu-nine.vercel.app/",
+    layout: "card",
+  },
+  {
+    id: 2,
+    title: "Notes Management Application",
+    description:
+      "A TypeScript-based notes app with CRUD functionality and local storage support for offline use. Features a responsive UI with custom CSS and an intuitive search function to improve usability and accessibility.",
+    image: "/images/Notes_app.png", // update this path to your actual image
+    number: "02",
+    category: "Professional",
+    skills: [
+      "TypeScript",
+      "React.js",
+      "Local Storage",
+      "Custom CSS",
+      "CRUD",
+    ],
+    website:
+      "https://notes-taking-web-nv6eceq95-shweta-kawars-projects.vercel.app/",
     layout: "card",
   },
 ];
@@ -56,17 +74,18 @@ const Projects = () => {
         {/* {sectionTitle} */}
       </h3>
       <div className="max-w-5xl mx-auto space-y-20">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <div
             key={project.id}
-            className="flex flex-col md:flex-row bg-gray-900 rounded-lg shadow-lg overflow-hidden animate-fade-in [animation-delay:${0.2 * (index + 1)}s]"
+            className={`flex flex-col md:flex-row bg-gray-900 rounded-lg shadow-lg overflow-hidden animate-fade-in`}
+            style={{ animationDelay: `${0.2 * (index + 1)}s` }}
           >
             {/* Left: Image */}
             <div className="flex items-center justify-center max-md:rounded-t-xl md:w-1/2 lg:p-10 md:rounded-l-xl">
               <img
                 src={project.image}
                 alt={project.title}
-                className="rounded-xl shadow-lg transition-transform duration-500 md:hover:scale-105 min-h-full object-cover color-trasparent"
+                className="rounded-xl shadow-lg transition-transform duration-500 md:hover:scale-105 min-h-full object-cover color-transparent"
                 loading="lazy"
               />
             </div>
@@ -114,12 +133,12 @@ const Projects = () => {
       aria-labelledby="projects-heading"
     >
       <div className="container mx-auto px-4 md:px-6">
-         <h2
-            id="about-heading"
-            className="text-3xl md:text-4xl font-bold mb-12 text-center text-white animate-slide-up"
-          >
-            My <span className="text-indigo-400">Projects</span>
-          </h2>
+        <h2
+          id="projects-heading"
+          className="text-3xl md:text-4xl font-bold mb-12 text-center text-white animate-slide-up"
+        >
+          My <span className="text-indigo-400">Projects</span>
+        </h2>
 
         {/* Professional Projects Section */}
         {professionalProjects.length > 0 &&
