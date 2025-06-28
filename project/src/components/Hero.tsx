@@ -1,4 +1,4 @@
-import { Github, Linkedin, FileText, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { useEffect, useState, useMemo } from 'react';
 
 // Define the type for a single box
@@ -80,9 +80,9 @@ const Hero = () => {
     { top: 'top-1/3', left: 'right-1/3', size: 'w-18 h-18', border: 'border-cyan-400/30', bg: 'bg-cyan-400/10', delay: '10s', hideMobile: true },
   ], []);
 
-  const handleOpenResume = () => {
-    setIsResumeOpen(true);
-  };
+  // const handleOpenResume = () => {
+  //   setIsResumeOpen(true);
+  // };
 
   const handleCloseResume = () => {
     setIsResumeOpen(false);
@@ -145,7 +145,7 @@ const Hero = () => {
             Let’s create something amazing together!
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center gap-6 mb-12 animate-fade-in-delay-2">
+          {/* <div className="flex flex-col sm:flex-row items-center gap-6 mb-12 animate-fade-in-delay-2">
             <button
               onClick={handleOpenResume}
               className="bg-white text-black px-8 py-4 rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 font-semibold flex items-center gap-2"
@@ -153,7 +153,7 @@ const Hero = () => {
               <FileText size={20} />
               View Resume
             </button>
-          </div>
+          </div> */}
 
           <div className="flex space-x-6 animate-fade-in-delay-2">
             {[
